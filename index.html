@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Moira Butts - IT Professional | CompTIA Security+" />
+        <meta name="author" content="Moira Butts" />
+        <title>Moira Butts | IT Professional</title>
+        <!-- Font Awesome icons -->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            :root {
+                --bs-primary: #bd5d38;
+                --bs-primary-rgb: 189, 93, 56;
+                --bs-link-color: #bd5d38;
+                --bs-link-hover-color: #974a2d;
+            }
+
+            body {
+                padding-top: 3.375rem;
+                color: #6c757d;
+                font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+
+            @media (min-width: 992px) {
+                body {
+                    padding-top: 0;
+                    padding-left: 17rem;
+                }
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #343a40;
+            }
+
+            h1 { font-size: 6rem; line-height: 1; }
+            h2 { font-size: 3.5rem; }
+            h3 { font-size: 2rem; }
+
+            .subheading {
+                font-family: "Saira Extra Condensed", sans-serif;
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: #bd5d38;
+            }
+
+            p.lead {
+                font-size: 1.15rem;
+                font-weight: 400;
+            }
+
+            /* ── Side Nav ── */
+            #sideNav {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                background-color: #343a40;
+            }
+
+            #sideNav .navbar-nav .nav-item .nav-link {
+                font-weight: 800;
+                letter-spacing: 0.05rem;
+                text-transform: uppercase;
+                color: rgba(255,255,255,0.75);
+            }
+
+            #sideNav .navbar-nav .nav-item .nav-link:hover {
+                color: #fff;
+            }
+
+            #sideNav .navbar-toggler:focus {
+                outline-color: #d48a6e;
+            }
+
+            @media (min-width: 992px) {
+                #sideNav {
+                    padding-left: 0;
+                    padding-right: 0;
+                    text-align: center;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    width: 17rem;
+                    height: 100vh;
+                }
+
+                #sideNav .navbar-brand {
+                    display: flex;
+                    margin: auto auto 0;
+                    padding: 0.5rem;
+                }
+
+                #sideNav .navbar-brand .img-profile {
+                    max-width: 10rem;
+                    max-height: 10rem;
+                    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+                }
+
+                #sideNav .navbar-collapse {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-grow: 0;
+                    width: 100%;
+                    margin-bottom: auto;
+                }
+
+                #sideNav .navbar-collapse .navbar-nav {
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                #sideNav .navbar-collapse .navbar-nav .nav-item {
+                    display: block;
+                }
+
+                #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+                    display: block;
+                }
+            }
+
+            /* ── Social Icons ── */
+            .social-icons .social-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 3.5rem;
+                width: 3.5rem;
+                background-color: #495057;
+                color: #fff;
+                border-radius: 100%;
+                font-size: 1.5rem;
+                margin-right: 1.5rem;
+                text-decoration: none;
+                transition: background-color 0.2s ease;
+            }
+
+            .social-icons .social-icon:last-child { margin-right: 0; }
+            .social-icons .social-icon:hover { background-color: #bd5d38; }
+
+            /* ── Dev Icons ── */
+            .dev-icons { font-size: 3rem; }
+            .dev-icons .list-inline-item { color: #495057; transition: color 0.2s; }
+            .dev-icons .list-inline-item:hover { color: #bd5d38; }
+
+            /* ── Resume Sections ── */
+            section.resume-section {
+                display: flex;
+                align-items: center;
+                padding: 5rem 1rem;
+                max-width: 75rem;
+            }
+
+            section.resume-section .resume-section-content {
+                width: 100%;
+            }
+
+            @media (min-width: 768px) {
+                section.resume-section { min-height: 100vh; }
+            }
+
+            @media (min-width: 992px) {
+                section.resume-section { padding: 5rem 3rem; }
+            }
+
+            /* ── Badges / Tags ── */
+            .badge-project {
+                display: inline-block;
+                background: rgba(189, 93, 56, 0.1);
+                color: #bd5d38;
+                border: 1px solid rgba(189, 93, 56, 0.3);
+                border-radius: 4px;
+                padding: 0.2rem 0.5rem;
+                font-size: 0.8rem;
+                font-weight: 700;
+                margin: 0.15rem;
+                text-transform: uppercase;
+                letter-spacing: 0.04rem;
+            }
+
+            /* ── Text primary override ── */
+            .text-primary { color: #bd5d38 !important; }
+            a { color: #bd5d38; }
+            a:hover { color: #974a2d; }
+
+            /* ── bg-primary ── */
+            .bg-primary { background-color: #bd5d38 !important; }
+
+            /* ── navbar-brand name ── */
+            .navbar-brand-name {
+                color: #fff;
+                font-family: "Saira Extra Condensed", sans-serif;
+                font-size: 1.4rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+            }
+
+            /* ── Project card ── */
+            .project-card {
+                background: #f8f9fa;
+                border-left: 4px solid #bd5d38;
+                border-radius: 4px;
+                padding: 1.25rem 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .project-card h4 {
+                color: #343a40;
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            hr.divider { border-color: rgba(189,93,56,0.3); }
+        </style>
+    </head>
+    <body id="page-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav" style="background-color:#343a40;">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none navbar-brand-name">Moira Butts</span>
+                <span class="d-none d-lg-block">
+                    <!-- Profile photo placeholder — replace src with your image path -->
+                    <div style="width:9rem;height:9rem;border-radius:50%;background:#495057;border:0.5rem solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin:auto;">
+                        <i class="fas fa-user" style="font-size:3.5rem;color:rgba(255,255,255,0.4);"></i>
+                    </div>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#keynotes">Keynotes</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container-fluid p-0">
+
+            <!-- About -->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Moira
+                        <span class="text-primary">Butts</span>
+                    </h1>
+                    <div class="subheading mb-3">
+                        Customer Service Technician · Hampton, VA ·
+                        <a href="mailto:buttsmoira@gmail.com">buttsmoira@gmail.com</a>
+                    </div>
+                    <div class="mb-2">
+                        <span class="badge-project"><i class="fas fa-shield-halved me-1"></i>CompTIA Security+</span>
+                    </div>
+                    <p class="lead mb-4 mt-4">
+                        IT professional with a foundation in network support, cybersecurity, and cloud infrastructure. Currently serving as a Customer Service Technician while actively building hands-on AWS and Linux skills through independent projects. Holder of the CompTIA Security+ certification and committed to a career in information security and cloud technology.
+                    </p>
+                    <p class="lead mb-5">
+                        Experienced in technical support, systems troubleshooting, and customer-facing technology environments. Seeking opportunities to bring a growing technical skill set — including AWS EC2, Linux administration, and CI/CD pipelines — into a dedicated IT or cybersecurity role.
+                    </p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#!" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#!" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a class="social-icon" href="#!" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0 divider" />
+
+            <!-- Experience -->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Customer Service Technician</h3>
+                            <div class="subheading mb-3">Department of Motor Vehicles (DMV)</div>
+                            <p>Provide technical and customer service support in a high-volume government service environment. Assist the public with digital systems, troubleshoot technology-related issues, and ensure smooth operations across service workflows.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Current</span></div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Level I Network Engineer</h3>
+                            <div class="subheading mb-3">Previous Employer</div>
+                            <p>Collaborated with district-level staff to provide essential technical support, ensuring seamless network operations for administration. Focused on network security, infrastructure maintenance, and end-user support across diverse hardware and software platforms.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Previous Role</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0 divider" />
+
+            <!-- Projects -->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+
+                    <div class="project-card">
+                        <h4><i class="fab fa-aws text-primary me-2"></i>Linux EC2 Bash Automation — AWS</h4>
+                        <p class="mb-2">Built and deployed a Linux EC2 instance on AWS with a suite of custom bash scripts covering three core administrative functions:</p>
+                        <ul class="mb-3">
+                            <li><strong>Active Connections Display</strong> — real-time monitoring of network connections and active sessions</li>
+                            <li><strong>Disk Management</strong> — automated reporting and management of disk usage across the instance</li>
+                            <li><strong>Security Auditing</strong> — scripted audits for open ports, user permissions, and system vulnerabilities</li>
+                        </ul>
+                        <div>
+                            <span class="badge-project">AWS EC2</span>
+                            <span class="badge-project">Linux</span>
+                            <span class="badge-project">Bash</span>
+                            <span class="badge-project">Cloud Security</span>
+                            <span class="badge-project">System Administration</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h4><i class="fas fa-globe text-primary me-2"></i>Resume Website with CI/CD Pipeline</h4>
+                        <p class="mb-2">Designed, built, and deployed a professional resume website using a full CI/CD pipeline — automating deployment from GitHub to AWS (S3 + CloudFront + CodePipeline).</p>
+                        <div>
+                            <span class="badge-project">HTML/CSS</span>
+                            <span class="badge-project">AWS S3</span>
+                            <span class="badge-project">CloudFront</span>
+                            <span class="badge-project">CodePipeline</span>
+                            <span class="badge-project">CI/CD</span>
+                            <span class="badge-project">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0 divider" />
+
+            <!-- Keynote Appearances -->
+            <section class="resume-section" id="keynotes">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Keynote Appearances</h2>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Speaker — Mentorship vs. Sponsorship</h3>
+                            <div class="subheading mb-2">Black Brand Event</div>
+                            <p>Shared personal and professional insights to distinguish the roles of mentorship and sponsorship in career development, drawing from lived experience in the IT field.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Panelist — National Cybersecurity Discussion</h3>
+                            <div class="subheading mb-2">Panel with Harry Coker, Former U.S. National Cyber Director</div>
+                            <p>Participated in a high-level discussion on national cybersecurity priorities, workforce development, and emerging challenges in the cybersecurity landscape.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Attendee — CI/CD for Static Sites with GitHub Actions</h3>
+                            <div class="subheading mb-2">Cloud Skills Workshop</div>
+                            <p>Completed a comprehensive workshop on continuous integration and continuous deployment practices, focusing on GitHub Actions implementation and workflow automation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0 divider" />
+
+            <!-- Education -->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Tidewater Community College</h3>
+                            <div class="subheading mb-3">Associate of Science — Information Systems</div>
+                            <p>Focused coursework in networking, systems administration, and information technology infrastructure.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Spring 2021 – Present</span></div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Virginia Wesleyan University</h3>
+                            <div class="subheading mb-3">Certificate of Completion — CompTIA Security+ Workshop</div>
+                            <p>Intensive Security+ preparation program covering network security, cryptography, threats and vulnerabilities, identity management, and risk management.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2023 – November 2023</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0 divider" />
+
+            <!-- Skills -->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+
+                    <div class="subheading mb-3">Technologies & Platforms</div>
+                    <ul class="list-inline dev-icons mb-4">
+                        <li class="list-inline-item" title="Linux"><i class="fab fa-linux"></i></li>
+                        <li class="list-inline-item" title="AWS"><i class="fab fa-aws"></i></li>
+                        <li class="list-inline-item" title="GitHub"><i class="fab fa-github"></i></li>
+                        <li class="list-inline-item" title="Apple / macOS"><i class="fab fa-apple"></i></li>
+                        <li class="list-inline-item" title="Android"><i class="fab fa-android"></i></li>
+                        <li class="list-inline-item" title="Ubuntu"><i class="fab fa-ubuntu"></i></li>
+                        <li class="list-inline-item" title="Python"><i class="fab fa-python"></i></li>
+                    </ul>
+
+                    <div class="subheading mb-3">Key Competencies</div>
+                    <ul class="fa-ul mb-0">
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                            Cloud Infrastructure (AWS EC2, S3, CloudFront, CodePipeline)
+                        </li>
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                            Linux Administration & Bash Scripting
+                        </li>
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                            Network Security & Cybersecurity Fundamentals (CompTIA Security+)
+                        </li>
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                            CI/CD Pipeline Development (GitHub Actions, AWS CodePipeline)
+                        </li>
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                            Technical Troubleshooting & Problem Solving
+                        </li>
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                            Analytical & Critical Thinking
+                        </li>
+                        <li class="mb-2">
+                            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                            Customer Support & Team Collaboration
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0 divider" />
+
+            <!-- Achievements -->
+            <section class="resume-section" id="achievements">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Achievements</h2>
+                    <ul class="fa-ul mb-0">
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            <strong>CompTIA Security+</strong> — Virginia Wesleyan University Global Campus, Fall 2023
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            <strong>Women Who Lead</strong> — Professional Development Certificate of Completion, Fall 2023
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            <strong>Cloud Skills for the Real World</strong> — CI/CD Certificate of Completion, Spring 2025
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            <strong>Cybersecurity Panelist</strong> — National-level discussion with former U.S. National Cyber Director Harry Coker
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0 divider" />
+
+            <!-- Interests -->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Although technology plays a significant role in my life, I've found real fulfillment in creative pursuits outside of my career. Art has become a huge passion — I love drawing portraits, painting canvases, and photography, and have entered a few competitions along the way. When I'm not creating, you'll find me reading or writing in my journal.</p>
+                    <p>I'm genuinely obsessed with beauty and style, so I always keep up with the latest makeup and hair trends. Spending quality time with family and friends is important to me, and I adopted an insanely handsome orange cat named <strong>Chestnut</strong> who brings endless joy to my days!</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Smooth scroll for nav links -->
+        <script>
+            document.querySelectorAll('a.js-scroll-trigger').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        // Close mobile nav
+                        const navCollapse = document.getElementById('navbarResponsive');
+                        if (navCollapse.classList.contains('show')) {
+                            navCollapse.classList.remove('show');
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
