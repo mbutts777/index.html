@@ -25,3 +25,11 @@ jobs:
     - name: Deploy files to S3
       run: |
         aws s3 sync . s3://moiraresumesite --delete --exclude ".git/*" --exclude ".github/*"
+    - name: Deploy to S3
+      run: aws s3 sync ./dist s3://your-bucket-name --delete
+
+    - name: Clear CloudFront Cache
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+          --paths "/*"
