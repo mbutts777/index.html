@@ -21,7 +21,7 @@ jobs:
 
     - name: Deploy files to S3
       run: |
-        aws s3 sync . s3://moiraresumesite.s3-website-us-east-1.amazonaws.com --delete --exclude ".git*" --exclude ".github*"
+        aws s3 sync . s3://moiraresumesite --delete --exclude ".git*" --exclude ".github*"
 
     - name: Invalidate CloudFront Cache
       run: |
