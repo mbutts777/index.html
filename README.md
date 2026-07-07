@@ -2,7 +2,7 @@
 CI/CD Professional Resume Website
 # ☁️ Cloud Security Engineer Portfolio Site
 
-Hi! Here is my personal resume and portfolio website where I deployed an S3 static website using the CI/CD pipeline. 
+Hi! Here is my personal resume and portfolio website where I deployed a secure, edge-cached static website using an automated CI/CD pipeline. 
 This portfolio will be used to aid me in my pursuit of Cloud Security Engineering.  I have a background as an IT support specialist. I also have experience with Linux system administration and cybersecurity. I received CompTIA Security+ certification and am currently studying for the AWS Cloud Solutions Architect Associate certification.
 
 My domain site: www.moirainthecloud.com
@@ -14,7 +14,7 @@ My domain site: www.moirainthecloud.com
 These are the AWS services and tools I used to create my website:
 | IAM | Configured user account in IAM with specific permissions. Set up MFA for user accounts
 
-| Hosting | AWS S3 (static website) | used this service to host my website materials. I created an S3 bucket that houses all my objects from GitHub; set region to us-east-1 (N. Virginia). 
+| Hosting | AWS S3 (static website) | used this service to host my website materials. I configured a private object storage bucket with "Block all access" enabled that holds all my raw website assets. This makes it accessible via CloudFront's Origin Access Control; set region to us-east-1 (N. Virginia). 
 
 | AWS CloudFront + AWS Certificate Manager | Because AWS CloudFront is a Content Delivery Network (CDN) service, I was able to use this for secure transmission, availability, and faster site loading for my domain. I requested an SSL certificate from AWS Certificate Manager (ACM) and then added the Secure Hypertext Transfer Protocol (HTTPS) label in CloudFront for encryption on my custom domain name. 
 
@@ -59,7 +59,7 @@ These are the AWS services and tools I used to create my website:
 | Encryption – By utilizing SSL/TLS encryption (HTTPS), my pipeline is fully encrypted using custom digital certificates from AWS Certificate Manger.
 -	Accessing the site using HTTP will automatically upgrade to an HTTPS label
 
-| Reducing the Attack Surface – By configuring CloudFront with Open Access Control (OAC) I was able to reduce the angles an attacker might take to infiltrate or exfiltrate data from the site; locks any open back doors. 
+| Reducing the Attack Surface – By configuring CloudFront with Origin Access Control (OAC) I was able to reduce the angles an attacker might take to infiltrate or exfiltrate data from the site; locks any open back doors. 
 
 
 ## 🧱 Security Architecture Diagram
