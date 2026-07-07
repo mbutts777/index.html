@@ -13,11 +13,17 @@ My domain site: www.moirainthecloud.com
 
 These are the AWS services and tools I used to create my website:
 | IAM | Configured user account in IAM with specific permissions. Set up MFA for user accounts
+
 | Hosting | AWS S3 (static website) | used this service to host my website materials. I created an S3 bucket that houses all my objects from GitHub; set region to us-east-1 (N. Virginia). 
+
 | AWS CloudFront + AWS Certificate Manager | Because AWS CloudFront is a Content Delivery Network (CDN) service, I was able to use this for secure transmission, availability, and faster site loading for my domain. I requested an SSL certificate from AWS Certificate Manager (ACM) and then added the Secure Hypertext Transfer Protocol (HTTPS) label in CloudFront for encryption on my custom domain name. 
+
 | IONOS | Domain Registrar
+
 | AWS Route 53 | AWS Route 53 is the DNS service I used for my server.  I created a hosted zone in Route 53. From there I took the 4 NS records (nameservers) and put them into IONOS as my default nameservers. Now Route 53 is in control of where incoming traffic goes instead of IONOS.  
+
 | CI/CD | AWS CodePipeline (GitHub → S3 auto-deploy) | I used AWS CodePipeline for automation for continuous integration and continuous delivery of my GitHub workflows file. This allows me to push code from GitHub to CodePipeline to host, test, and deploy my portfolio website.  
+
 | Frontend | HTML5, CSS3, Bootstrap 5 | I used HTML5 for the structure of the text, CSS3 to design the appearance and layout, and Bootstrap 5 as my template for a faster build. Bootstrap 5 also allows me to make my website available on mobile devices
 
 
@@ -46,10 +52,13 @@ These are the AWS services and tools I used to create my website:
 ---
 ## AWS Cybersecurity Features of Custom Domain Site
 | IAM - For safe practices I created a “user” in IAM with least privileges access to host, test, and deploy my application instead of using my root AWS account. I added MFA to protect the account and then added specific permissions to the user account in order to build the pipeline.
+
 | CloudFront Origin Access Control (OAC) - created an S3 policy restricting access to CloudFront OAC only; this security feature prevents public access to files in AWS S3 Bucket which protects backend part of website from public access.
 - Using AWS IAM Service Principal to authenticate and SigV4 cryptographic request signing, the bucket will ONLY respond to requests originating from my designated CloudFront distribution. This feature ignores the public internet altogether.
+
 | Encryption – By utilizing SSL/TLS encryption (HTTPS), my pipeline is fully encrypted using custom digital certificates from AWS Certificate Manger.
 -	Accessing the site using HTTP will automatically upgrade to an HTTPS label
+
 | Reducing the Attack Surface – By configuring CloudFront with Open Access Control (OAC) I was able to reduce the angles an attacker might take to infiltrate or exfiltrate data from the site; locks any open back doors. 
 
 
