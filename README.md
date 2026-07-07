@@ -5,7 +5,7 @@ CI/CD Professional Resume Website
 Hi! Here is my personal resume and portfolio website where I deployed an S3 static website using the CI/CD pipeline. 
 This portfolio will be used to aid me in my pursuit of Cloud Security Engineering.  I have a background as an IT support specialist. I also have experience with Linux system administration and cybersecurity. I received CompTIA Security+ certification and am currently studying for the AWS Cloud Solutions Architect Associate certification.
 
-My domain site: www.moirainthecloud.com 
+My domain site: www.moirainthecloud.com
 
 ---
 
