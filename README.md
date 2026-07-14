@@ -37,19 +37,21 @@ These are the AWS services and tools I used to create my website:
 
 ## 🛠️ Deployment Pipeline Structure: 
 
-
-  [ Local Machine ]       
+ 
+     [ Local Machine ]       
    
          │ 
          ▼ (git push)
 
-[ GitHub Repo ] ──── (Webhook Trigger) ───► [ AWS CodePipeline ]
-                                                     
+     [ GitHub Repo ] ──── (Webhook Trigger) ───► [ AWS CodePipeline ]  
+                                                    
+                                                      
                                                       │
                                                       ├──► 1. Fetches Git Artifacts
                                                       ├──► 2. Syncs Private S3 Bucket 
                                                       └──► 3. Triggers CloudFront Invalidation
-                                                                 
+                                                                   
+                                                                   
                                                                    │
                                                                    ▼
                                                         [Global Users See Updates]  
@@ -71,22 +73,22 @@ These are the AWS services and tools I used to create my website:
 
 ## 🧱 Security Architecture Diagram
 
- [Internet User] 
+     [Internet User] 
         │
         ▼
-   [IONOS Registrar] (Delegates DNS Authority)
+     [IONOS Registrar] (Delegates DNS Authority)
         │
         ▼
-  [AWS Route 53] (DNS Alias Resolution)
+     [AWS Route 53] (DNS Alias Resolution)
         │
         ▼
- [Amazon CloudFront] ─── (Manages SSL/TLS Certificate via ACM)
+     [Amazon CloudFront] ─── (Manages SSL/TLS Certificate via ACM)
         │
         ▼ (Authenticated via SigV4 / Service Principal)
- [Origin Access Control]
+     [Origin Access Control]
         │
         ▼
-  [Amazon S3 Bucket] (Locked: Block All Public Access)
+     [Amazon S3 Bucket] (Locked: Block All Public Access)
 
 
 ## 📌 My Custom Domain Features: 
