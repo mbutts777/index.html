@@ -38,8 +38,7 @@ These are the AWS services and tools I used to create my website:
 ## 🛠️ Deployment Pipeline Structure: 
 
 
-  Local Machine  
-        
+  [Local Machine]       
          │ 
          ▼ (git push)
 
@@ -49,11 +48,10 @@ These are the AWS services and tools I used to create my website:
                                                       ├──► 1. Fetches Git Artifacts
                                                       ├──► 2. Syncs Private S3 Bucket 
                                                       └──► 3. Triggers CloudFront Invalidation
-                                                      
-                                                                   
+                                                                 
                                                                    │
                                                                    ▼
-                                                        Global Users See Updates  
+                                                        [Global Users See Updates]  
 
                                                        
 
