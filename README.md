@@ -38,7 +38,8 @@ These are the AWS services and tools I used to create my website:
 ## 🛠️ Deployment Pipeline Structure: 
 
 
-  ( Local Machine )       
+  [ Local Machine ]       
+   
          │ 
          ▼ (git push)
 
