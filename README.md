@@ -1,6 +1,6 @@
-# index.html
-CI/CD Professional Resume Website
-# ☁️ Cloud Security Engineer Portfolio Site
+# CI/CD Professional Resume Website
+index.html
+# ☁️ Cloud Security Engineer Portfolio 
 
 Hi! Here is my personal resume and portfolio website where I deployed a secure, edge-cached static website using an automated CI/CD pipeline. 
 This portfolio will be used to aid me in my pursuit of Cloud Security Engineering.  I have a background as an IT support specialist. I also have experience with Linux system administration and cybersecurity. I received CompTIA Security+ certification and am currently studying for the AWS Cloud Solutions Architect Associate certification.
@@ -24,7 +24,7 @@ These are the AWS services and tools I used to create my website:
 
 | CI/CD | AWS CodePipeline (GitHub → S3 auto-deploy) | I used AWS CodePipeline for automation for continuous integration and continuous delivery of my GitHub workflows file. This allows me to push code from GitHub to CodePipeline to host, test, and deploy my portfolio website.  
 
-| Frontend | HTML5, CSS3, Bootstrap 5 | I used HTML5 for the structure of the text, CSS3 to design the appearance and layout, and Bootstrap 5 as my template for a faster build. Bootstrap 5 also allows me to make my website available on mobile devices
+| Frontend | HTML5, CSS3, Bootstrap 5 | I used HTML5 for the structure of the text, CSS3 to design the appearance and layout, and Bootstrap 5 as my template for a faster build. This also allows me to make my site mobile device friendly. 
 
 
 ## ⚙️ Deployment Pipeline: 
@@ -59,16 +59,16 @@ These are the AWS services and tools I used to create my website:
                                                        
 
 ---
-## AWS Cybersecurity Features of Custom Domain Site
-| IAM - For safe practices I created a “user” in IAM with least privileges access to host, test, and deploy my application instead of using my root AWS account. I added MFA to protect the account and then added specific permissions to the user account in order to build the pipeline.
+## 🔒 AWS Security Features of Custom Domain Site
+| IAM | - For safe practices I created a “user” in IAM with least privileges access to host, test, and deploy my application instead of using my root AWS account. I added MFA to protect the account and then added specific permissions to the user account in order to build the pipeline.
 
-| CloudFront Origin Access Control (OAC) - created an S3 policy restricting access to CloudFront OAC only; this security feature prevents public access to files in AWS S3 Bucket which protects backend part of website from public access.
+| CloudFront Origin Access Control (OAC) | - created an S3 policy restricting access to CloudFront OAC only; this security feature prevents public access to files in AWS S3 Bucket which protects the backend part of my website from public access.
 - Using AWS IAM Service Principal to authenticate and SigV4 cryptographic request signing, the bucket will ONLY respond to requests originating from my designated CloudFront distribution. This feature ignores the public internet altogether.
 
-| Encryption – By utilizing SSL/TLS encryption (HTTPS), my pipeline is fully encrypted using custom digital certificates from AWS Certificate Manger.
--	Accessing the site using HTTP will automatically upgrade to an HTTPS label
+| Encryption | – By utilizing SSL/TLS encryption (HTTPS), my pipeline is fully encrypted using custom digital certificates from AWS Certificate Manger.
+-	Anyone accessing the site using HTTP will automatically upgrade the URL to HTTPS. 
 
-| Reducing the Attack Surface – By configuring CloudFront with Origin Access Control (OAC) I was able to reduce the angles an attacker might take to infiltrate or exfiltrate data from the site; locks any open back doors. 
+| Reducing the Attack Surface | – By configuring CloudFront with Origin Access Control (OAC) I was able to reduce any angles an attacker might use to infiltrate or exfiltrate data from the site; locks any open back doors. 
 
 
 ## 🧱 Security Architecture Diagram
