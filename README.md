@@ -38,8 +38,10 @@ These are the AWS services and tools I used to create my website:
 ## 🛠️ Deployment Pipeline Structure: 
 
 [ Local Machine ] 
+        
          │ 
          ▼ (git push)
+  
    [ GitHub Repo ] ──── (Webhook Trigger) ───► [ AWS CodePipeline ]
                                                       │
                                                       ├──► 1. Fetches Git Artifacts
@@ -47,7 +49,9 @@ These are the AWS services and tools I used to create my website:
                                                       └──► 3. Triggers CloudFront Invalidation
                                                                    │
                                                                    ▼
-                                                       [ Global Users See Updates ]
+                                                       [ Global Users See Updates ] 
+
+                                                       
 
 ---
 ## AWS Cybersecurity Features of Custom Domain Site
