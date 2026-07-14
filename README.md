@@ -92,3 +92,6 @@ These are the AWS services and tools I used to create my website:
 - Skills grid (Cloud, Linux, Networking, Security
 
 This project is personal and not licensed for redistribution. Feel free to use the architecture as a reference for your own static site + AWS pipeline setup.
+
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap5,aws,github&perline=3)](https://skillicons.dev)
